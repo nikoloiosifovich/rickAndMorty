@@ -1,5 +1,6 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
+const routes = require("./routes");
 
 const server = express();
 
@@ -10,8 +11,6 @@ nunjucks.configure(__dirname + "/views", {
   noCache: true
 });
 
-server.get("/", (req, res) => {
-  return res.render("index.html");
-});
+server.use(routes);
 
 server.listen(3333);
