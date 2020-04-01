@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.header-banner {
+  background-color: #312833;
+  padding-top: 35px;
+  padding-bottom: 100px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  /* background-image: url("//grapesjs.com/img/bg-gr-v.png"),
+    url("//www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com.br%2FMorty-Original-Soundtrack-Disco-Vinil%2Fdp%2FB07FMCHFM6&psig=AOvVaw11Tbmf11Xb3TDGmf6I71Xz&ust=1585806185395000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCC1cfCxugCFQAAAAAdAAAAABAD");
+  background-attachment: scroll, scroll;
+  background-position: left top, center center;
+  background-repeat: repeat-y, no-repeat;
+  background-size: contain, cover; */
+  min-height: 30px;
+}
+.container-width {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 54px 0 54px;
+}
+.menu {
+  float: right;
+  width: 50%;
+}
+.lead-btn {
+  margin-top: 15px;
+  padding: 10px;
+  width: 190px;
+  min-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 30px;
+  background-color: #433e44d5;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.lead-btn:hover {
+  background-color: #fff;
+  color: #4c114e;
+}
+.lead-btn:active {
+  background-color: #221c24;
+  color: #fff;
+}
+.flex-sect {
+  background-color: #fafafa;
+  padding: 100px 0;
+  font-family: Helvetica, serif;
+}
+.flex-title {
+  margin-bottom: 15px;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 700;
+  color: #555;
+  padding: 5px;
+}
+.flex-desc {
+  margin-bottom: 55px;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 5px;
+}
+.cards {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.card {
+  background-color: white;
+  height: 300px;
+  width: 300px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  transition: all 0.5s ease;
+  font-weight: 100;
+  overflow: hidden;
+}
+.card:hover {
+  margin-top: -5px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+}
+.card-header {
+  height: 155px;
+  /*background-image: url("//placehold.it/350x250/78c5d6/fff/image1.jpg");*/
+  background-size: cover;
+  background-position: center center;
+}
+/* .card-header.ch2 {
+  background-image: url("//placehold.it/350x250/459ba8/fff/image2.jpg");
+}
+.card-header.ch3 {
+  background-image: url("//placehold.it/350x250/79c267/fff/image3.jpg");
+}
+.card-header.ch4 {
+  background-image: url("//placehold.it/350x250/c5d647/fff/image4.jpg");
+}
+.card-header.ch5 {
+  background-image: url("//placehold.it/350x250/f28c33/fff/image5.jpg");
+}
+.card-header.ch6 {
+  background-image: url("//placehold.it/350x250/e868a2/fff/image6.jpg");
+} */
+.card-body {
+  padding: 15px 15px 5px 15px;
+  color: #555;
+}
+.card-title {
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+.card-sub-title {
+  color: #b3b3b3;
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+.card-desc {
+  font-size: 0.85rem;
+  line-height: 17px;
+}
+.footer-under {
+  background-color: #312833;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  min-height: 500px;
+  color: #eee;
+  position: relative;
+  font-weight: 100;
+  font-family: Helvetica, serif;
+}
+.made-with {
+  float: left;
+  width: 50%;
+  padding: 5px 0;
+}
+#icbq2v {
+  padding: 0;
+  min-height: 50px;
+  position: fixed;
+  width: 100%;
+}
+#iwewgc {
+  height: 100%;
+}
+#i0fum3 {
+  margin: 5px;
+  float: right;
+  min-height: 25px;
+  padding: 5px 10px;
+}
+#ih6vgm {
+  margin: 10% auto;
+}
+#i49wyu {
+  padding: 8px 0 0;
+  position: fixed;
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  top: 0;
+  bottom: 0;
+  height: 4%;
+  margin: auto 0 0;
+  transform: rotateX(0) rotateY(0) rotateZ(0) scaleX(1) scaleY(1) scaleZ(1);
+}
+#iskxt7 {
+  text-align: center;
+}
+#iizabl {
+  text-align: center;
+}
+#i8l5el {
+  text-align: center;
+}
+#i1b9am {
+  font-weight: 100;
+  text-align: center;
+}
+#i98dk2 {
+  color: rgb(64, 64, 64);
+  font-family: "Open Sans", sans-serif;
+  font-size: 17.6px;
+  font-style: italic;
+  text-align: start;
+  background-color: rgb(255, 255, 255);
+}
+#ixr8h6 {
+  min-height: 25px;
+  padding: 0 55px 0 0;
+}
+#i7porh {
+  padding: 0 0 0 0;
+}
+#ici52w {
+  color: rgba(237, 229, 229, 0.48);
+  position: fixed;
+  display: block;
+  justify-content: flex-start;
+  width: 100%;
+  bottom: 10px;
+  top: 10px;
+  padding: 5px 0 5px 20px;
+}
+@media (max-width: 480px) {
+  #ih6vgm {
+    margin: 0 5% 0 5%;
+  }
+  #ixr8h6 {
+    padding: 0 55px 0 0;
+  }
+}
