@@ -10,12 +10,12 @@
 <body>
   <header id="icbq2v" class="header-banner">
     <nav id="ixr8h6" class="menu">
-      <div id="i0fum3" class="lead-btn">HOME</div>
+      <div id="i0fum3" class="lead-btn">ABOUT</div>
     </nav>
   </header>
 
   <section id="iwewgc" class="flex-sect">
-    <div id="ih6vgm" class="container-width">
+    <div class="container-width">
       <div id="izz1rr" class="flex-title">
         Rick and Morty
       </div>
@@ -30,14 +30,17 @@
 
         {% for char in base %}
 
-        <div id="i8pb7k" class="card">
-          <div id="i7porh" class="card-header" style="background-image: url('{{ char.image }}');"></div>
-          <div id="iyhqk1" class="card-body">
-            <div id="iskxt7" class="card-title">
-              {{ char.status }}
+        <!-- <a href="https://rickandmortyapi.com/api/character/{{ char.name.toLowerCase() }}"> -->
+        <a href="https://rickandmortyapi.com/api/character/{{ char.id }}">
+          <div id="i8pb7k" class="card">
+            <div id="i7porh" class="card-header" style="background-image: url('{{ char.image }}');"></div>
+            <div id="iyhqk1" class="card-body">
+              <div id="iskxt7" class="card-title">
+                {{ char.status }}
+              </div>
             </div>
           </div>
-        </div>
+        </a>
 
         {% endfor %}
 
@@ -47,7 +50,7 @@
   </section>
 
   <footer id="i49wyu" class="footer-under">
-    <div id="ici52w" class="made-with">with 👽 by <a draggable="true" href="https://github.com/nikoloiosifovich"
+    <div id="ici52w" class="made-with">with 👽 by <a draggable="false" href="https://github.com/nikoloiosifovich"
         class="link">Nikölo
         Iosifovich</a> ♦ GrapesJS
     </div>
