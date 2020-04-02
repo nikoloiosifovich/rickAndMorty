@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
@@ -14,47 +13,45 @@
       <div id="i0fum3" class="lead-btn">HOME</div>
     </nav>
   </header>
+
   <section id="iwewgc" class="flex-sect">
     <div id="ih6vgm" class="container-width">
-      <div id="izz1rr" class="flex-title">Rick and Morty</div>
-      <div id="i1b9am" class="flex-desc"><span id="i98dk2">“Eu sei que essa situação pode ser intimidadora. Você olha ao
-          redor e é tudo assustador e diferente, mas sabe… encará-las, avançar contra elas como um touro - é assim que
-          crescemos como pessoas.”</span></div>
-      <div id="iq3dv1" class="cards">
-        <div id="i8pb7k" class="card">
-          <div id="i7porh" class="card-header" style="background-image: url('{{ base[0].image }}');"></div>
-          <div id="iyhqk1" class="card-body">
-            <div id="iskxt7" class="card-title">Title one</div>
-            <div class="card-sub-title">Subtitle one</div>
-            <div class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header ch2" style="background-image: url('{{ base[1].image }}');"></div>
-          <div class="card-body">
-            <div id="iizabl" class="card-title">Title two</div>
-            <div class="card-sub-title">Subtitle two</div>
-            <div class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header ch3" style="background-image: url('{{ base[2].image }}');"></div>
-          <div class="card-body">
-            <div id="i8l5el" class="card-title">Title three</div>
-            <div class="card-sub-title">Subtitle three</div>
-            <div class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore</div>
-          </div>
-        </div>
+      <div id="izz1rr" class="flex-title">
+        Rick and Morty
       </div>
+      <div id="i1b9am" class="flex-desc">
+        <span id="i98dk2">“Eu sei que essa situação pode ser intimidadora. Você olha ao
+          redor e é tudo assustador e diferente, mas sabe… encará-las, avançar contra elas como um touro - é assim que
+          crescemos como pessoas.”
+        </span>
+      </div>
+
+      <div id="iq3dv1" class="cards">
+
+        {% for char in base %}
+
+        <div id="i8pb7k" class="card">
+          <div id="i7porh" class="card-header" style="background-image: url('{{ char.image }}');"></div>
+          <div id="iyhqk1" class="card-body">
+            <div id="iskxt7" class="card-title">
+              {{ char.status }}
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+      </div>
+
     </div>
   </section>
+
   <footer id="i49wyu" class="footer-under">
-    <div id="ici52w" class="made-with">with @ by <a draggable="true" href="" id="i9drzf-2" class="link"></a> Nikölo
-      Iosifovich &amp; <a draggable="true" href="" id="ikwtoz-2" class="link"></a>GrapesJS
+    <div id="ici52w" class="made-with">with 👽 by <a draggable="true" href="https://github.com/nikoloiosifovich"
+        class="link">Nikölo
+        Iosifovich</a> ♦ GrapesJS
     </div>
   </footer>
+
 </body>
 <html>
