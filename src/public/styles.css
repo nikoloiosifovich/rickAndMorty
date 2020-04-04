@@ -3,6 +3,7 @@
 }
 body {
   margin: 0;
+  overflow: auto;
 }
 
 a {
@@ -20,7 +21,7 @@ a {
   min-height: 30px;
 }
 .container-width {
-  width: 90%;
+  /* width: 90%; */
   max-width: 1150px;
   margin: 0;
   display: inline list-item;
@@ -55,7 +56,7 @@ a {
 .flex-sect {
   background-color: #fafafa;
   padding: 100px 0;
-  font-family: Helvetica, serif;
+  font-family: Montserrat, Helvetica, serif;
   display: block;
 }
 .flex-title {
@@ -63,14 +64,15 @@ a {
   font-size: 2em;
   text-align: center;
   font-weight: 700;
-  color: #555;
+  color: #101225c2;
   padding: 5px;
 }
 .flex-desc {
-  font-size: 1em;
+  font-size: 1.4em;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  padding: 5px;
+  padding: 0 5px;
+  margin: 0 30px;
 }
 .cards {
   padding: 20px 0;
@@ -189,11 +191,12 @@ a {
   text-align: center;
 }
 #i98dk2 {
-  color: rgb(64, 64, 64);
-  font-family: "Open Sans", sans-serif;
-  font-size: 17.6px;
+  color: #101225c2;
+  font-family: "Open Sans", Montserrat, sans-serif;
+  /* font-size: 17.6px; */
   font-style: italic;
-  text-align: start;
+  text-align: center;
+  font-weight: 600;
   background-color: rgb(255, 255, 255);
 }
 #ixr8h6 {

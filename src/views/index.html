@@ -30,8 +30,7 @@
 
         {% for char in base %}
 
-        <!-- <a href="https://rickandmortyapi.com/api/character/{{ char.name.toLowerCase() }}"> -->
-        <a href="https://rickandmortyapi.com/api/character/{{ char.id }}">
+        <a id="{{char.status.toLowerCase()}}">
           <div id="i8pb7k" class="card">
             <div id="i7porh" class="card-header" style="background-image: url('{{ char.image }}');"></div>
             <div id="iyhqk1" class="card-body">
@@ -56,5 +55,6 @@
     </div>
   </footer>
 
+  <script src="/scripts.js"></script>
 </body>
 <html>
