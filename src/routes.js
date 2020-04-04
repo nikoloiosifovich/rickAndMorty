@@ -54,7 +54,7 @@ routes.get("/character", (req, res) => {
     toRender = [...unknown];
   }
 
-  return res.render("index.html", { base: toRender }); // chage this to status-page
+  return res.render("status.html", { base: toRender }); // chage this to status-page
 });
 
 module.exports = routes;
