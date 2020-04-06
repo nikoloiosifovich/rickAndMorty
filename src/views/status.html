@@ -1,58 +1,23 @@
-<!doctype html>
-<html lang="pt-Br">
+{% extends "layout.html" %}
+{% set bodyId = "status" %}
 
-<head>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-</head>
+{% block title %}
+<title>Rick and Morty - Status</title>
+{% endblock %}
 
-<body>
-  <header id="icbq2v" class="header-banner">
-    <nav id="ixr8h6" class="menu">
-      <div id="i0fum3" class="lead-btn">ABOUT</div>
-    </nav>
-  </header>
+{% block content %}
+{% for char in base %}
 
-  <section id="iwewgc" class="flex-sect">
-    <div class="container-width">
-      <div id="izz1rr" class="flex-title">
-        Rick and Morty - STATUS
+<span id="{{char.id}}">
+  <div id="i8pb7k" class="card">
+    <div id="i7porh" class="card-header" style="background-image: url('{{ char.image }}');"></div>
+    <div id="iyhqk1" class="card-body">
+      <div id="iskxt7" class="card-title">
+        {{ char.status }}
       </div>
-      <div id="i1b9am" class="flex-desc">
-        <span id="i98dk2">“Eu sei que essa situação pode ser intimidadora. Você olha ao
-          redor e é tudo assustador e diferente, mas sabe… encará-las, avançar contra elas como um touro - é assim que
-          crescemos como pessoas.”
-        </span>
-      </div>
-
-      <div id="iq3dv1" class="cards">
-
-        {% for char in base %}
-
-        <span id="{{char.id}}" class="{{char.status.toLowerCase()}}">
-          <div id="i8pb7k" class="card">
-            <div id="i7porh" class="card-header" style="background-image: url('{{ char.image }}');"></div>
-            <div id="iyhqk1" class="card-body">
-              <div id="iskxt7" class="card-title">
-                {{ char.status }}
-              </div>
-            </div>
-          </div>
-        </span>
-
-        {% endfor %}
-
-      </div>
-
     </div>
-  </section>
+  </div>
+</span>
 
-  <footer id="i49wyu" class="footer-under">
-    <div id="ici52w" class="made-with">with 👽 by <a draggable="false" href="https://github.com/nikoloiosifovich"
-        class="link">Nikölo
-        Iosifovich</a> ♦ GrapesJS
-    </div>
-  </footer>
-</body>
-<html>
+{% endfor %}
+{% endblock %}

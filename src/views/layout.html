@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+  <meta charset="UTF-8">
+  {% block title %}
+  <title>Rick and Morty</title>
+  {% endblock %}
+  {% include "linkedhead.html" %}
+</head>
+
+<body id="{{ bodyId }}">
+  {% include "linkedheader.html" %}
+
+  <section id="iwewgc" class="flex-sect">
+    <div class="container-width">
+      <div id="izz1rr" class="flex-title">
+        Rick and Morty
+      </div>
+      <div id="i1b9am" class="flex-desc">
+        <span id="i98dk2">“Eu sei que essa situação pode ser intimidadora. Você olha ao
+          redor e é tudo assustador e diferente, mas sabe… encará-las, avançar contra elas como um touro - é assim que
+          crescemos como pessoas.”
+        </span>
+      </div>
+      <div id="iq3dv1" class="cards">
+
+        {% block content %}
+        {% endblock %}
+
+      </div>
+    </div>
+  </section>
+
+  {% include "linkedfooter.html" %}
+  {% include "linkedscripts.html" %}
+</body>
+
+</html>
