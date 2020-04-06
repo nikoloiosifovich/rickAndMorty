@@ -1,60 +1,45 @@
 const express = require("express");
-const axios = require("axios");
+const axios = require("axios").default;
 
 const routes = express.Router();
 
-const baseUrl = "https://rickandmortyapi.com/api/character/";
+axios
+  .all([
+    axios.get("https://rickandmortyapi.com/api/character/?status=alive"),
+    axios.get("https://rickandmortyapi.com/api/character/?status=dead"),
+    axios.get("https://rickandmortyapi.com/api/character/?status=unknown"),
+  ])
+  .then(
+    axios.spread(async (alive, dead, unknown) => {
+      this.alive = await alive.data.results;
+      this.dead = await dead.data.results;
+      this.unknown = await unknown.data.results;
 
-let alive = [];
-let dead = [];
-let unknown = [];
+      routes.get("/", async (req, res) => {
+        this.query = req.headers["x-char"];
 
-routes.get("/", async (req, res) => {
-  alive = await axios
-    .get(baseUrl + "?status=alive")
-    .then(response => {
-      return response.data.results;
+        if (!this.query) {
+          this.home = await [this.alive[0], this.dead[1], this.unknown[0]];
+          res.render("index.html", { base: this.home });
+        } else {
+          res.redirect("/character");
+        }
+      });
+
+      routes.get("/character", async (req, res) => {
+        if (this.query === "alive") {
+          this.status = await this.alive;
+        } else if (this.query === "dead") {
+          this.status = await this.dead;
+        } else if (this.query === "unknown") {
+          this.status = await this.unknown;
+        } else {
+          this.query = undefined;
+          res.redirect("/");
+        }
+        res.render("status.html", { base: this.status });
+      });
     })
-    .catch(error => {
-      console.log(error);
-    });
-
-  dead = await axios
-    .get(baseUrl + "?status=dead")
-    .then(response => {
-      return response.data.results;
-    })
-    .catch(error => {
-      console.log(error);
-    });
-
-  unknown = await axios
-    .get(baseUrl + "?status=unknown")
-    .then(response => {
-      return response.data.results;
-    })
-    .catch(error => {
-      console.log(error);
-    });
-
-  const base = [alive[0], dead[1], unknown[0]];
-
-  return res.render("index.html", { base });
-});
-
-routes.get("/character", (req, res) => {
-  const { status } = req.query;
-  let toRender = [];
-
-  if (status === "alive") {
-    toRender = [...alive];
-  } else if (status === "dead") {
-    toRender = [...dead];
-  } else if (status === "unknown") {
-    toRender = [...unknown];
-  }
-
-  return res.render("status.html", { base: toRender }); // chage this to status-page
-});
+  );
 
 module.exports = routes;
