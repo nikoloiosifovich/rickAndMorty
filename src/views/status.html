@@ -17,7 +17,7 @@
   <section id="iwewgc" class="flex-sect">
     <div class="container-width">
       <div id="izz1rr" class="flex-title">
-        Rick and Morty
+        Rick and Morty - STATUS
       </div>
       <div id="i1b9am" class="flex-desc">
         <span id="i98dk2">“Eu sei que essa situação pode ser intimidadora. Você olha ao
@@ -30,7 +30,7 @@
 
         {% for char in base %}
 
-        <a id="{{char.id}}">
+        <span id="{{char.id}}" class="{{char.status.toLowerCase()}}">
           <div id="i8pb7k" class="card">
             <div id="i7porh" class="card-header" style="background-image: url('{{ char.image }}');"></div>
             <div id="iyhqk1" class="card-body">
@@ -39,7 +39,7 @@
               </div>
             </div>
           </div>
-        </a>
+        </span>
 
         {% endfor %}
 
@@ -54,7 +54,5 @@
         Iosifovich</a> ♦ GrapesJS
     </div>
   </footer>
-
-  <script src="/scripts.js"></script>
 </body>
 <html>

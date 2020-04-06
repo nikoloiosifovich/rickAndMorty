@@ -30,7 +30,7 @@
 
         {% for char in base %}
 
-        <a id="{{char.status.toLowerCase()}}">
+        <a id="{{char.id}}" class="{{char.status.toLowerCase()}}" nohref>
           <div id="i8pb7k" class="card">
             <div id="i7porh" class="card-header" style="background-image: url('{{ char.image }}');"></div>
             <div id="iyhqk1" class="card-body">
@@ -51,7 +51,7 @@
   <footer id="i49wyu" class="footer-under">
     <div id="ici52w" class="made-with">with 👽 by <a draggable="false" href="https://github.com/nikoloiosifovich"
         class="link">Nikölo
-        Iosifovich</a> ♦ GrapesJS
+        Iosifovich</span> ♦ GrapesJS
     </div>
   </footer>
 
