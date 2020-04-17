@@ -51,6 +51,4 @@ e em modo produção:
 
 `npm start`
 
-<h3><em>Nota: Esta aplicação roda em <strong>http://localhost:3333</strong> e testes não foram implementados, pois ainda estou estudando sobre.</em></h3>
-
-<p align='center'><strong>That's all folks!</strong></p>
+<p align='center'><em>Nota: Esta aplicação roda em <strong>http://localhost:3333</strong> e testes não foram implementados, pois ainda estou estudando sobre.</em><br/><strong>That's all folks!</strong></p>
